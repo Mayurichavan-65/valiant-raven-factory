@@ -1,0 +1,133 @@
+{
+  "tokens": {
+    "colors": {
+      "accent": "#7ED957",
+      "primary": "#179D3D",
+      "scheme": "warm-neutral background (cream/warm gray), green primary accents, light mode only",
+      "secondary": "#F5F5E8"
+    },
+    "typography": {
+      "fontFamily": "Inter, Nunito, system-ui",
+      "fontType": "Geometric, semi-bold, modern sans-serif"
+    },
+    "radii": {
+      "default": "md (16px cards, 24px big sections)",
+      "full": "9999px",
+      "lg": "1rem",
+      "sm": "0.25rem"
+    },
+    "shadows": {
+      "default": "Soft, layered, elevation system, hover accent for cards and buttons",
+      "lg": "0 8px 24px rgba(0,0,0,0.2)",
+      "md": "0 4px 12px rgba(0,0,0,0.15)",
+      "sm": "0 1px 3px rgba(0,0,0,0.1)"
+    },
+    "spacing": {
+      "2xl": "6rem",
+      "lg": "2rem",
+      "md": "1rem",
+      "sm": "0.5rem",
+      "xl": "4rem",
+      "xs": "0.25rem"
+    }
+  },
+  "shared_components": [
+    {
+      "name": "Header",
+      "path": "src/components/Header.jsx",
+      "purpose": "Site-wide top navigation with call-to-action triggers. Visual anchor for brand and major sections.",
+      "props": [
+        "onLoginClick",
+        "onSignupClick"
+      ]
+    },
+    {
+      "name": "HeroFoodRelief",
+      "path": "src/components/HeroFoodRelief.jsx",
+      "purpose": "Instantly inspires trust, frames the mission, and drives donor/NGO action via primary CTAs.",
+      "props": [
+        "onDonateClick",
+        "onRequestClick",
+        "stats"
+      ]
+    },
+    {
+      "name": "HowItWorksSteps",
+      "path": "src/components/HowItWorksSteps.jsx",
+      "purpose": "Concisely educates newcomers on the platform flow for both donors and recipients.",
+      "props": []
+    },
+    {
+      "name": "ImpactStatsStrip",
+      "path": "src/components/ImpactStatsStrip.jsx",
+      "purpose": "Showcases transparent, credible impact to motivate trust and action.",
+      "props": [
+        "impactStats"
+      ]
+    },
+    {
+      "name": "CoreModulesFeatureGrid",
+      "path": "src/components/CoreModulesFeatureGrid.jsx",
+      "purpose": "Highlights the four pivotal SaaS modules supporting the platform’s mission.",
+      "props": []
+    },
+    {
+      "name": "TestimonialsCarousel",
+      "path": "src/components/TestimonialsCarousel.jsx",
+      "purpose": "Builds social proof and emotional trust across multiple stakeholder types.",
+      "props": [
+        "testimonials"
+      ]
+    },
+    {
+      "name": "PartnerNGOShowcase",
+      "path": "src/components/PartnerNGOShowcase.jsx",
+      "purpose": "Demonstrates legitimacy and scale of network through recognizable brands/orgs.",
+      "props": [
+        "partners"
+      ]
+    },
+    {
+      "name": "VolunteerCallToAction",
+      "path": "src/components/VolunteerCallToAction.jsx",
+      "purpose": "Drives more signups for critical volunteer roles powering the logistics chain.",
+      "props": [
+        "onVolunteerClick"
+      ]
+    },
+    {
+      "name": "FAQAccordion",
+      "path": "src/components/FAQAccordion.jsx",
+      "purpose": "Reduces friction by addressing common uncertainties of all core roles.",
+      "props": [
+        "faqs"
+      ]
+    },
+    {
+      "name": "Footer",
+      "path": "src/components/Footer.jsx",
+      "purpose": "Provides site navigation, trust cues, and legal. Visually anchors the bottom of site.",
+      "props": []
+    }
+  ],
+  "pages": [
+    {
+      "name": "Home",
+      "route": "/",
+      "file": "src/pages/Home.jsx",
+      "uses": [
+        "Header",
+        "HeroFoodRelief",
+        "HowItWorksSteps",
+        "ImpactStatsStrip",
+        "CoreModulesFeatureGrid",
+        "TestimonialsCarousel",
+        "PartnerNGOShowcase",
+        "VolunteerCallToAction",
+        "FAQAccordion",
+        "Footer"
+      ]
+    }
+  ],
+  "notes": "Design DNA: Modern startup editorial: geometric sans-serif (Inter, Nunito), friendly radii, strong card separation, layered gradients, rich illustrations. Generous white space, subtle drop shadows, with soft tactile feel. Green as primary accent for food/nature (for buttons, icons, CTAs). Editorial imagery. Responsive grid for testimonials and logos. Hover and scroll-triggered animations throughout. CTA buttons: pill, large, tactile. Visuals must blend tech trust and community warmth.. Animation: Framer Motion for fade, slide, spring; card ripple/scale for hover.. Interaction: Modern, animated, with tactile hover for all CTAs/cards. Smooth spring effect on navigation and transitions. Accessible focus states.. Color scheme: warm-neutral background (cream/warm gray), green primary accents, light mode only."
+}

@@ -1,0 +1,305 @@
+{
+  "project_metadata": {
+    "project_name": "valiant-cloud-venture",
+    "project_category": "Landing Page / Public Web",
+    "description": "A professional, responsive landing page for a modern food redistribution platform fighting hunger by connecting surplus food sources with NGOs, shelters, and volunteers. Uses editorial modern design, smooth animations, social proof, and clear CTAs. No login or dashboard flows; landing page only.",
+    "core_purpose": "Publicly showcase, inspire trust, and rapidly onboard new food donors, NGOs, and volunteers for a food redistribution \u0026 hunger relief SaaS platform.",
+    "target_audience": "Food donors (restaurants, hotels, event organizers, households), NGOs, shelters, orphanages, volunteer communities, sponsors, partners, and the general public",
+    "key_features": [
+      "High-trust hero section with animated impact stats",
+      "Step-by-step How It Works education",
+      "Impact statistics with live/animated counters",
+      "Interactive Features grid for core modules",
+      "Social proof via testimonials and partner logos",
+      "Strong volunteer recruitment section with CTA",
+      "Exhaustive FAQ addressing all core roles",
+      "Sticky navigation with role selector hint and Login/Signup CTAs",
+      "Modern, mobile-first, editorial design"
+    ]
+  },
+  "frontend": {
+    "pages": [
+      {
+        "page_name": "Home",
+        "route": "/",
+        "show_in_nav": true,
+        "nav_order": 1,
+        "purpose": "Public landing page for platform visibility, first conversion, and stakeholder education.",
+        "description": "High-impact, editorial, single-page landing for a food redistribution SaaS: visually rich, content-dense but highly scannable, minimalistic in navigation, and optimized for instant stakeholder clarity. Delivers a modern look with cream and green accent, soft gradients, animated stats, smooth section transitions, interactive feature cards. Each section is spaced for legibility and invites engagement through bold CTAs. Fully responsive with one-column stacking on mobile, sticky header, and footer anchor. Hamburger nav on small screens. All text leverages a modern geometric sans-serif with warm undertones. Illustrative images evoke community, care, and action.",
+        "sections": [
+          "Header",
+          "HeroFoodRelief",
+          "HowItWorksSteps",
+          "ImpactStatsStrip",
+          "CoreModulesFeatureGrid",
+          "TestimonialsCarousel",
+          "PartnerNGOShowcase",
+          "VolunteerCallToAction",
+          "FAQAccordion",
+          "Footer"
+        ],
+        "content_notes": "Hero section dominates viewport with impact stats; ensures immediate trust and conversion. How It Works educates first-time donors/partners. All major flows and stakeholders visible from home. Role selector prepares for role-based SaaS (dashboard apps are future scope). Testimonials continue trust-building. All sections mobile-optimized and minimally paginated for landing but full-featured.\n\nHeader contains dual CTAs for both Login and Sign Up, screens for all roles via role selector dropdown, and a hamburger menu on mobile. Role selection is a UI hint/affordance only (no functionality needed at landing, but visually present for future SaaS).\n\nMain sections laid out in strong logical order with editorial-style color blocks separating sections. CTA buttons are highly prominent, animated on hover, and anchored to Hero and Volunteer sections. Footer provides deep nav and social proof.\n\nNo backend, but all stats, logos, testimonials delivered as props or local static assets.",
+        "data_needs": [],
+        "is_protected": false
+      }
+    ],
+    "navigation": {
+      "type": "horizontal",
+      "position": "top",
+      "style": "sticky shadow, warm/cream bg, green accent, modern, mobile slide-out menu",
+      "has_logo": true,
+      "has_search": false,
+      "extra_items": [
+        "role_selector_dropdown"
+      ],
+      "links": [
+        {
+          "label": "Features",
+          "route": "#features"
+        },
+        {
+          "label": "Impact",
+          "route": "#impact"
+        },
+        {
+          "label": "How It Works",
+          "route": "#how-it-works"
+        },
+        {
+          "label": "Partners",
+          "route": "#partners"
+        },
+        {
+          "label": "Volunteer",
+          "route": "#volunteer"
+        },
+        {
+          "label": "FAQ",
+          "route": "#faq"
+        },
+        {
+          "label": "Login",
+          "route": "/login"
+        },
+        {
+          "label": "Sign Up",
+          "route": "/signup"
+        }
+      ]
+    },
+    "theme": {
+      "design_dna": "Modern startup editorial: geometric sans-serif (Inter, Nunito), friendly radii, strong card separation, layered gradients, rich illustrations. Generous white space, subtle drop shadows, with soft tactile feel. Green as primary accent for food/nature (for buttons, icons, CTAs). Editorial imagery. Responsive grid for testimonials and logos. Hover and scroll-triggered animations throughout. CTA buttons: pill, large, tactile. Visuals must blend tech trust and community warmth.",
+      "color_scheme": "warm-neutral background (cream/warm gray), green primary accents, light mode only",
+      "primary_color": "#179D3D",
+      "secondary_color": "#F5F5E8",
+      "accent_color": "#7ED957",
+      "font_family": "Inter, Nunito, system-ui",
+      "font_type": "Geometric, semi-bold, modern sans-serif",
+      "border_radius": "md (16px cards, 24px big sections)",
+      "shadow_style": "Soft, layered, elevation system, hover accent for cards and buttons",
+      "animation_style": "Framer Motion for fade, slide, spring; card ripple/scale for hover.",
+      "interaction_style": "Modern, animated, with tactile hover for all CTAs/cards. Smooth spring effect on navigation and transitions. Accessible focus states."
+    },
+    "components": [
+      {
+        "component_name": "Header",
+        "type": "section",
+        "description": "A sticky header bar with left-aligned logo (food/nature icon and wordmark), and right-aligned main navigation links: Features, Impact, How It Works, Partners, Volunteer, FAQ, and role selector (Donor / NGO / Volunteer) dropdown hint. Primary CTAs: Login (outline button) and Sign Up (filled green button) visible on desktop and mobile. Responsive: collapses to hamburger nav on mobile with slide-out overlay. Padding-x: 6, Padding-y: 3, box-shadow-lg, border-b-2 (subtle warm-gray). Font: Semi-bold, modern, all-caps for links.",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Site-wide top navigation with call-to-action triggers. Visual anchor for brand and major sections.",
+        "props": [
+          "onLoginClick",
+          "onSignupClick"
+        ]
+      },
+      {
+        "component_name": "HeroFoodRelief",
+        "type": "section",
+        "description": "Full viewport height hero with editorial background (gradient cream/warm-gray with organic shapes and subtle food imagery). Large, bold headline (90% width on desktop, centered on mobile): \"Nourishing Communities. Reducing Food Waste.\". Subheadline (max-w-xl, muted): \"Connect surplus food with those who need it most: seamless, safe, impactful.\" Under headline: two large buttons (Donate Food - green filled, Request Food - white with green outline), interactive hover animation (scale + glow). Lower third of hero: animated counter stats (meals served, kg food saved, active NGOs, volunteers), pulling numbers from props or context. + Framer Motion entrance effects on text/stats/buttons.",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Instantly inspires trust, frames the mission, and drives donor/NGO action via primary CTAs.",
+        "props": [
+          "onDonateClick",
+          "onRequestClick",
+          "stats"
+        ]
+      },
+      {
+        "component_name": "HowItWorksSteps",
+        "type": "section",
+        "description": "Horizontal or vertical (on mobile) 3-step process card: Step 1 (Donate): Icon of food donation, title, brief explanation. Step 2 (Match): Icon of location/pairing, title, text about algorithmically matching food with closest NGO/recipient. Step 3 (Deliver): Icon of delivery van or volunteer, title, text about fast, safe, volunteer-powered delivery. Each step in own card, with animated progressive arrows (Framer Motion). Warm cream backgrounds, icons inside soft green circles.",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Concisely educates newcomers on the platform flow for both donors and recipients.",
+        "props": []
+      },
+      {
+        "component_name": "ImpactStatsStrip",
+        "type": "section",
+        "description": "Wide horizontal statistics strip with smooth-animated numeric counters: Meals Served, KG Food Rescued, Active NGOs, Volunteers Engaged. Cards or list format, each stat with matching icon and supporting caption. Colors: muted backgrounds, green-accented numbers, soft shadow, mild rounded corners. Animates on scroll-in.",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Showcases transparent, credible impact to motivate trust and action.",
+        "props": [
+          "impactStats"
+        ]
+      },
+      {
+        "component_name": "CoreModulesFeatureGrid",
+        "type": "section",
+        "description": "Grid layout (2x2 desktop, 1x4 mobile) cards for platform modules: Donor Dashboard, NGO Matching, Volunteer Coordination, Real-time Food Tracking. Each card: title, short description, interactive icon/illustration overlay with gradient border, hover-ripple/scale effect. Cards slightly elevated, moderate radius, cream background, focus/active shadow. Smooth entrance animation (fade/scale).",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Highlights the four pivotal SaaS modules supporting the platform’s mission.",
+        "props": []
+      },
+      {
+        "component_name": "TestimonialsCarousel",
+        "type": "section",
+        "description": "Horizontal (Framer Motion powered) carousel of testimonial cards from donors, NGOs, and volunteers. Each card: user avatar (masked circle), user role label, quote, subtle signature, green star rating bar. Cards snap-center, swipeable on mobile, next/prev dots for navigation. Background: soft gray, quote text italic, full accessibility contrast.",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Builds social proof and emotional trust across multiple stakeholder types.",
+        "props": [
+          "testimonials"
+        ]
+      },
+      {
+        "component_name": "PartnerNGOShowcase",
+        "type": "section",
+        "description": "Responsive grid of NGO partner logos in color, with optional tooltip on hover (NGO name, location, years active). Each logo on card with cool shadow and mild animation (pop or pulse on hover), 4/row desktop, 2/row mobile. Card backgrounds: white or cream. Heading: 'Trusted by...' (bold, large).",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Demonstrates legitimacy and scale of network through recognizable brands/orgs.",
+        "props": [
+          "partners"
+        ]
+      },
+      {
+        "component_name": "VolunteerCallToAction",
+        "type": "section",
+        "description": "Section with editorial image (team volunteering, hands, food), headline (Join as a Volunteer), short copy describing volunteer impact and roles, one big CTA button ('Become a Volunteer', green filled, animates on hover). Image left/text right on desktop, stacked on mobile. Accessibility: strong color contrast, alt-tagged images, clear fonts.",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Drives more signups for critical volunteer roles powering the logistics chain.",
+        "props": [
+          "onVolunteerClick"
+        ]
+      },
+      {
+        "component_name": "FAQAccordion",
+        "type": "section",
+        "description": "Accordion-style FAQ: question list (bold, warm), click-expand answer (smooth animation, mild shadow pop). 6-8 Q\u0026A covering safety, donation size, leftover handling, tracking, NGOs vetting, donor privacy, volunteering logistics, getting started. Card backgrounds: warm-gray, green accent bar at left, rounded corners. Responsive full-width on mobile.",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Reduces friction by addressing common uncertainties of all core roles.",
+        "props": [
+          "faqs"
+        ]
+      },
+      {
+        "component_name": "Footer",
+        "type": "section",
+        "description": "Full-width footer with cream/warm-gray bg, subtle green gradient top-border. Left: stacked logo and short mission statement. Middle: navigation links split by column (Platform: Features, Impact, How It Works, Volunteer; Resources: FAQ, Blog, Contact). Right: social icons (LinkedIn, Instagram, Twitter). Tiny legal/disclaimer row at bottom in lighter font. Large tappable targets for mobile. Subtle layer shadow, border-radius-top.",
+        "used_on": [
+          "Home"
+        ],
+        "purpose": "Provides site navigation, trust cues, and legal. Visually anchors the bottom of site.",
+        "props": []
+      }
+    ],
+    "layout": {
+      "has_header": true,
+      "has_footer": true,
+      "has_sidebar": false,
+      "max_width": "1440px",
+      "spacing": "consistent 32px section-gap, 16px between cards",
+      "footer_links": [
+        {
+          "label": "Features",
+          "route": "#features"
+        },
+        {
+          "label": "Impact",
+          "route": "#impact"
+        },
+        {
+          "label": "How It Works",
+          "route": "#how-it-works"
+        },
+        {
+          "label": "Partners",
+          "route": "#partners"
+        },
+        {
+          "label": "Volunteer",
+          "route": "#volunteer"
+        },
+        {
+          "label": "FAQ",
+          "route": "#faq"
+        },
+        {
+          "label": "Login",
+          "route": "/login"
+        },
+        {
+          "label": "Sign Up",
+          "route": "/signup"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "requires_backend": false,
+    "apis": [],
+    "database": {
+      "models": []
+    },
+    "authentication": {
+      "required": false,
+      "type": "N/A",
+      "providers": [],
+      "protected_apis": null
+    },
+    "external_apis": [],
+    "file_storage": {
+      "required": false,
+      "types": [],
+      "max_size": "N/A"
+    }
+  },
+  "technical_specs": {
+    "frontend": {
+      "framework": "React (Vite or Create React App)",
+      "routing": "react-router-dom v6 (single page only)",
+      "styling": "Tailwind v4 (custom config for palette, radii, font)",
+      "state_management": "useState/useContext for UI state, no global store",
+      "animation": "Framer Motion (hero, stats, section transitions, card hover)",
+      "dependencies": [
+        "react",
+        "react-router-dom",
+        "tailwindcss@4",
+        "framer-motion"
+      ]
+    },
+    "backend": {
+      "framework": "N/A",
+      "database": "N/A",
+      "orm": "N/A",
+      "auth": "N/A",
+      "dependencies": []
+    }
+  }
+}
